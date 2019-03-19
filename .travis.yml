@@ -4,5 +4,4 @@ before_install:
   - echo "f8a2c6a2-8c24-47b6-a6a3-4b2b3a4cd955" > ~/.vaadin.testbench.developer.license
   - phantomjs --version
 script: mvn verify
-after_success:
-  - mvn clean cobertura:cobertura coveralls:report
+
