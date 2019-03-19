@@ -55,41 +55,6 @@ public class MyAppIT extends TestBenchTestCase {
 	    getDriver().quit();
 	  }
 
-	  @Test
-	  public void testButton() {
-		  $(ButtonElement.class).caption("Log in").first().click();
-		//Get text field value;
-	        String actualValue = $(LabelElement.class).first().getText();
-
-	        //Check that the value is not empty
-	        Assert.assertFalse(actualValue.isEmpty());
-
-	   }
-	  @Test
-	  public void testAdminLogin() {
-		  $(TextFieldElement.class).caption("USERNAME").first().setValue("admin");
-		  $(TextFieldElement.class).caption("PASSWORD").first().setValue("admin");
-		  $(ButtonElement.class).caption("Log in").first().click();
-			//Get text field value;
-		        String actualValue = $(LabelElement.class).first().getText();
-		        System.out.println(actualValue);
-		        //Check that the value is not empty
-		        Assert.assertTrue(actualValue.equals("Welcome to learn MySQL page: admin"));
-		  
-	  }
-	  @Test
-	  public void testWrongLogin() {
-		  $(TextFieldElement.class).caption("USERNAME").first().setValue("bob");
-		  $(TextFieldElement.class).caption("PASSWORD").first().setValue("bob");
-		  $(ButtonElement.class).caption("Log in").first().click();
-			//Get text field value;
-		        String actualValue = $(LabelElement.class).last().getText();
-		        System.out.println(actualValue);
-
-		        //Check that the value is not empty
-		        Assert.assertTrue(actualValue.equals("Wrong Username or Password!"));
-		  
-	  }
 	  
 	  
 	  
